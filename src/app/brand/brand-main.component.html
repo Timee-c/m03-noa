@@ -1,141 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="brand-main.component.css">
-  <title>Brand Product</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="tittle">
-      <h1>Produto Marca</h1>
+<div class="container">
+  <div class="tittle">
+    <h1>Produto Marca</h1>
+  </div>
+  <div class="bloco">
+    <div class="header">
+      <div class="left">
+        <input type="number">
+        <label for="">results per page</label>
+      </div>
+      <div class="right">
+        <label for="searc">Search</label>
+        <input type="text">
+      </div>
     </div>
-    <div class="bloco">
-
-      <div class="header">
-        <div class="left">
-          <input type="number">
-          <label for="">results per page</label>
+    <div class="table">
+      <div class="rowTop">
+        <div class="buttonsTable"></div>
+        <div class="id">
+          <h3>id</h3>
         </div>
-        <div class="right">
-          <label for="searc">Search</label>
-          <input type="text">
+        <div class="name">
+          <h3>Nome</h3>
         </div>
-      </div>
-
-      <div class="table">
-        <div class="rowTop">
-          <div class="buttonsTable"></div>
-          <div class="id">
-            <h3>id</h3>
-          </div>
-          <div class="name">
-            <h3>Nome</h3>
-          </div>
-          <div class="description">
-            <h3>Descrição</h3>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="buttonsTable">
-            <button class="editBtn">edit</button>
-            <button class="deleteBtn">delete</button>
-          </div>
-          <div class="id">
-            <p>59f28fd7</p>
-          </div>
-          <div class="name">
-            <p>celulares</p>
-          </div>
-          <div class="description">
-            <p>grupo de celulares</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="buttonsTable">
-            <button class="editBtn">edit</button>
-            <button class="deleteBtn">delete</button>
-          </div>
-          <div class="id">
-            <p>c3960ac4</p>
-          </div>
-          <div class="name">
-            <p>computadores</p>
-          </div>
-          <div class="description">
-            <p>grupo de computadores</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="buttonsTable">
-            <button class="editBtn">edit</button>
-            <button class="deleteBtn">delete</button>
-          </div>
-          <div class="id">
-            <p>c3960ac4</p>
-          </div>
-          <div class="name">
-            <p>computadores</p>
-          </div>
-          <div class="description">
-            <p>grupo de computadores</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="buttonsTable">
-            <button class="editBtn">edit</button>
-            <button class="deleteBtn">delete</button>
-          </div>
-          <div class="id">
-            <p>c3960ac4</p>
-          </div>
-          <div class="name">
-            <p>computadores</p>
-          </div>
-          <div class="description">
-            <p>grupo de computadores</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="buttonsTable">
-            <button class="editBtn">edit</button>
-            <button class="deleteBtn">delete</button>
-          </div>
-          <div class="id">
-            <p>c3960ac4</p>
-          </div>
-          <div class="name">
-            <p>computadores</p>
-          </div>
-          <div class="description">
-            <p>grupo de computadores</p>
-          </div>
+        <div class="description">
+          <h3>Descrição</h3>
         </div>
       </div>
 
-      <div class="pages">
-        <div class="text">
-          <p>Showing 0 to 0 of 0 entries</p>
-        </div>
-        <div class="buttons">
-          <button class="prevBtn">Previous</button>
-          <button class="nextBtn">Next</button>
-        </div>
-      </div>
-      <div class="add">
-        <button id="addBrand">+</button>
-      </div>
+      <ul class="row" *ngFor="let brand of brands">
+        <li class="buttonsTable">
+          <button class="editBtn">edit</button>
+          <button class="deleteBtn" (click)="brands.splice(this.brand.id, 1)">delete</button>
+        </li>
+        <li class="id">
+          <p>{{brand.id}}</p>
+        </li>
+        <li class="name">
+          <p>{{brand.name}}</p>
+        </li>
+        <li class="description">
+          <p>{{brand.description}}</p>
+        </li>
+      </ul>
 
+    </div>
+    <div class="pages">
+      <div class="text">
+        <p>Showing 0 to 0 of 0 entries</p>
+      </div>
+      <div class="buttons">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+      </div>
+    </div>
+    <div class="add">
+      <button id="addBrand">+</button>
     </div>
   </div>
-</body>
-
-</html>
+</div>

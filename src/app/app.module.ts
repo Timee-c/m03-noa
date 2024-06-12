@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GroupComponent } from './group/group.component';
+import { BrandMainComponent } from './brand/brand-main.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, SidebarComponent, GroupComponent
-   
+    AppComponent, HeaderComponent, SidebarComponent, GroupComponent,
+    BrandMainComponent
   ],
   imports: [
     BrowserModule,
