@@ -10,19 +10,25 @@
     justify-content: space-between;
     align-items: center;
     background-color: #7074f4;
-    margin-left: 20vw;
+
     height: 10vh;
     padding: 0;
   }
   
   .menu-icon, .search-icon, .notifications, .messages, .tasks, .profile {
     margin-right: 20px;
+    align-items: center;
+    display: flex;
+
+  }
+
+  .menu-icon {
+    display: none;
   }
   
   .material-icons {
     display: flex;
     position: relative;
-    align-items: center;
     font-size: 30px;
     color: white;
   }
@@ -34,15 +40,18 @@
     padding: 2px 6px;
     font-size: 12px;
     position: relative;
-    top: -10px;
     left: -10px;
+    align-items: center;
+    display: flex;
   }
   
   .profile {
     display: flex;
     align-items: center;
   }
-  
+  .separator-bar {
+    top: -5px;
+  }
   .user-name {
     margin-left: 10px;
     font-size: 22px;
@@ -63,10 +72,8 @@
   }
   .right-icons{
     display: flex;
-    justify-content: flex-end;
-  }
-  .sidebar-open {
-    margin-left: 0;
+    justify-content: center;
+    align-items: center;
   }
 
   @media only screen and (max-width: 1800px) {

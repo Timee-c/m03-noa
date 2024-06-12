@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: grid; 
+    grid-template-columns: 0.45fr 2.05fr; 
+    grid-template-rows: 0.5fr 2.4fr; 
+    grid-template-areas: 
+      "Sidebar Header"
+      "Sidebar main"; 
+  }
+  .header { grid-area: Header; 
+  }
+  .sidebar { grid-area: Sidebar; }
+  .main { grid-area: main; }
+
+  .sidebar-open {
+    grid-template-columns: 0fr !important;
+    color: red;
+  }
+
+  .sidebar-closed{
+    display: none;
+  }
