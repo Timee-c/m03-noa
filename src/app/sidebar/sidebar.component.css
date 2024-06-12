@@ -8,6 +8,12 @@
     flex-direction: column;
     align-items: center;
   }
+
+.nav-buttons {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
   
   .header {
     width: 20vw;
