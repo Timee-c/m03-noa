@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.hidden{
+    display: none;
+    margin-left: 2em;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7074f4;
+    margin-left: 20vw;
+    height: 10vh;
+    padding: 0;
+  }
+  
+  .menu-icon, .search-icon, .notifications, .messages, .tasks, .profile {
+    margin-right: 20px;
+  }
+  
+  .material-icons {
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+  }
+  
+  .badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-name {
+    margin-left: 10px;
+    font-size: 22px;
+    color: white;
+    margin-right: 10px;
+  }
+  .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .left-icon, .right-icons{
+    display: flex;
+    flex-direction: row;
+  }
+  .material-icons{
+    cursor: pointer;
+  }
+  .right-icons{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sidebar-open {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 1800px) {
+    .hidden{
+        display: flex;
+        margin-left: 2em;
+    }
+
+  }
