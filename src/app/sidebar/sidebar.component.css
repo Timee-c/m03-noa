@@ -9,6 +9,12 @@
     align-items: center;
     box-shadow: 1px solid lightgray;
   }
+
+.nav-buttons {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
   
 .nav-buttons {
   color: #9D9DAE;

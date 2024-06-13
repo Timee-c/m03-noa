@@ -5,13 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarService } from './sidebar.service';
+import { SidebarService } from './services/sidebar.service';
+import { GroupComponent } from './group/group.component';
+import { BrandMainComponent } from './brand/brand-main.component';
+import { AddBrandComponent } from './add-brand/add-brand.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, SidebarComponent, FooterComponent
-   
+    AppComponent, HeaderComponent, SidebarComponent, GroupComponent,
+    BrandMainComponent,
+    AddBrandComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="tittle">
+    <h1>Produto Marca</h1>
+  </div>
+  <div class="bloco">
+    <div class="header">
+      <div class="left">
+        <input type="number">
+        <label for="">results per page</label>
+      </div>
+      <div class="right">
+        <label for="searc">Search</label>
+        <input type="text">
+      </div>
+    </div>
+    <div class="table">
+      <div class="rowTop">
+        <div class="buttonsTable"></div>
+        <div class="id">
+          <h3>id</h3>
+        </div>
+        <div class="name">
+          <h3>Nome</h3>
+        </div>
+        <div class="description">
+          <h3>Descrição</h3>
+        </div>
+      </div>
+
+      <ul class="row" *ngFor="let brand of getbrandsServiceData().brands">
+        <li class="buttonsTable">
+          <button class="editBtn">edit</button>
+          <button class="deleteBtn">delete</button>
+        </li>
+        <li class="id">
+          <p>{{brand.id}}</p>
+        </li>
+        <li class="name">
+          <p>{{brand.name}}</p>
+        </li>
+        <li class="description">
+          <p>{{brand.description}}</p>
+        </li>
+      </ul>
+
+    </div>
+    <div class="pages">
+      <div class="text">
+        <p>Showing 0 to 0 of 0 entries</p>
+      </div>
+      <div class="buttons">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+      </div>
+    </div>
+    <div class="add">
+      <button id="addBrand">+</button>
+    </div>
+  </div>
+</div>
