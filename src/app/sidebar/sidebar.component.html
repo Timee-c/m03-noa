@@ -6,7 +6,7 @@
     <ul class="menu">
         <li>
             <i class="material-icons">dashboard</i>
-            <span>Dashboard</span>
+            <button class="nav-buttons" [routerLink]="['dashboard']">Dashboard</button >
 
         </li>
         <li class="border-bottom-menu">
@@ -14,11 +14,11 @@
         <li class="section-title">SIMPLE SCREENS</li>
         <li>
             <i class="material-icons">view_module</i>
-            <button class="nav-buttons" [routerLink]="['group']">Produto Grupo</button>
+            <button class="nav-buttons" [routerLink]="['group']">Produto Grupo</button >
         </li>
         <li>
             <i class="material-icons">bar_chart</i>
-            <button class="nav-buttons">Produto Subgrupo</button>
+            <button class="nav-buttons" [routerLink]="['subgroup']">Produto Subgrupo</button >
         </li>
         <li>
             <i class="material-icons">store</i>
@@ -26,11 +26,11 @@
         </li>
         <li>
             <i class="material-icons">view_compact</i>
-            <button class="nav-buttons">Produto Unidade</button>
+            <button class="nav-buttons" [routerLink]="['unit']">Produto Unidade</button >
         </li>
         <li>
             <i class="material-icons">description</i>
-            <button class="nav-buttons">Produto</button>
+            <button class="nav-buttons" [routerLink]="['product']">Produto</button >
         </li>
         
         <li class="border-bottom-menu">

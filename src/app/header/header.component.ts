@@ -7,13 +7,8 @@ import { SidebarService } from '../services/sidebar.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isSidebarOpen: boolean = true; // Inicialmente aberto
 
   constructor(private sidebarService: SidebarService) {
-    // Inscreva-se no serviço para receber atualizações sobre o estado da barra lateral
-    this.sidebarService.sidebarState.subscribe((isOpen: boolean) => {
-      this.isSidebarOpen = !isOpen;
-    });
   }
 
   toggleSidebar() {
