@@ -29,8 +29,8 @@
 
       <ul class="row" *ngFor="let brand of getbrandsServiceData().brands">
         <li class="buttonsTable">
-          <button class="editBtn">edit</button>
-          <button class="deleteBtn">delete</button>
+          <button class="editBtn"><mat-icon>create</mat-icon></button>
+          <button class="deleteBtn"><mat-icon>delete</mat-icon></button>
         </li>
         <li class="id">
           <p>{{brand.id}}</p>

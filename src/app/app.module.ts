@@ -9,7 +9,7 @@ import { SidebarService } from './services/sidebar.service';
 import { GroupComponent } from './group/group.component';
 import { BrandMainComponent } from './brand/brand-main.component';
 import { AddBrandComponent } from './add-brand/add-brand.component';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, SidebarComponent, GroupComponent,
@@ -18,6 +18,7 @@ import { AddBrandComponent } from './add-brand/add-brand.component';
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
     AppRoutingModule
   ],
   providers: [],

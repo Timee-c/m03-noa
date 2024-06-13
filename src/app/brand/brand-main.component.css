@@ -78,23 +78,35 @@ input {
   background-color: rgb(235, 238, 245);
 }
 
-.row {
+.row{
   display: flex;
-  border-top: 1px solid rgba(177, 177, 177, 0.4);
+  height: 23%;
+  border-top: 1px solid rgb(177, 177, 177, 0.4);
 }
-
-.buttonsTable, .id {
+.buttonsTable, .id{
   width: 20%;
-}
-
-.name, .description {
-  width: 30%;
-}
-
-.buttonsTable {
-  margin-left: 10px;
   display: flex;
   align-items: center;
+}
+.name, .description{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.buttonsTable{
+  display: flex;
+  align-items: center;
+}
+ 
+.row > .buttonsTable{
+  margin-left: -30px;
+}
+ 
+.row > .id{
+  margin-right: 7px;
+}
+.row > .name{
+  margin-right: 13px;
 }
 
 .pages {
