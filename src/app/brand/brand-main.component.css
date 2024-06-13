@@ -13,14 +13,17 @@
   align-items: center;
 }
 
-.tittle {
+.tittle{
   width: 98%;
   text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-.bloco {
-  height: 82vh;
-  width: 100vw;
+.bloco{
+  height: 76vh;
+  width: 75vw;
   background-color: white;
   display: flex;
   flex-direction: column;
