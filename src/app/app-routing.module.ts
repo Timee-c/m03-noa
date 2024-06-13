@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-  {path:"subgroup",component: FooterComponent}
+ // {path: "", component: DashboardComponent}
+  {path:"group",component: FooterComponent}
 ];
 
 @NgModule({
