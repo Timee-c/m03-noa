@@ -27,10 +27,10 @@
         </div>
       </div>
 
-      <ul class="row" *ngFor="let brand of brands">
+      <ul class="row" *ngFor="let brand of getbrandsServiceData().brands">
         <li class="buttonsTable">
           <button class="editBtn">edit</button>
-          <button class="deleteBtn" (click)="brands.splice(this.brand.id, 1)">delete</button>
+          <button class="deleteBtn">delete</button>
         </li>
         <li class="id">
           <p>{{brand.id}}</p>

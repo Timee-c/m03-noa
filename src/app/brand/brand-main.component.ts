@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { BrandDataService } from '../services/brand-data.service';
 
 @Component({
   selector: 'app-brand-main',
@@ -7,22 +7,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./brand-main.component.css']
 })
 export class BrandMainComponent {
-  brands: any[] = [{
-    id: 0,
-    name: 'Hugo Boss',
-    description: 'Só perfume brabo'
-  },
-  {
-    id: 1,
-    name: 'Adidas',
-    description: 'Tenis brabo'
-  },{
-    id: 1,
-    name: 'Adidas',
-    description: 'Tenis brabo'
-  }];
+
+  private brandsService =  inject(BrandDataService);
+
+  getbrandsServiceData() {
+    return this.brandsService;
+  }
 
   addBrand (brandToAdd: any) {
-    this.brands.push(brandToAdd);
+    this.brandsService.addBrand(brandToAdd);
+    brandToAdd.id = this.brandsService.brands.length + 1;
   }
 }
