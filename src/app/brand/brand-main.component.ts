@@ -8,14 +8,9 @@ import { BrandDataService } from '../services/brand-data.service';
 })
 export class BrandMainComponent {
 
-  private brandsService =  inject(BrandDataService);
+  private brandDataService =  inject(BrandDataService);
 
-  getbrandsServiceData() {
-    return this.brandsService;
-  }
-
-  addBrand (brandToAdd: any) {
-    this.brandsService.addBrand(brandToAdd);
-    brandToAdd.id = this.brandsService.brands.length + 1;
+  getBrandDataServiceData() {
+    return this.brandDataService;
   }
 }

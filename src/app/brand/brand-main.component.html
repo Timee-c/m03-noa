@@ -27,10 +27,10 @@
         </div>
       </div>
 
-      <ul class="row" *ngFor="let brand of getbrandsServiceData().brands">
+      <ul class="row" *ngFor="let brand of getBrandDataServiceData().brands">
         <li class="buttonsTable">
           <button class="editBtn">edit</button>
-          <button class="deleteBtn">delete</button>
+          <button class="deleteBtn" (click)="getBrandDataServiceData().removeBrand(brand.id - 1)">delete</button>
         </li>
         <li class="id">
           <p>{{brand.id}}</p>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="add">
-      <button id="addBrand">+</button>
+      <button id="addBrand"  [routerLink]="['brandAdd']">+</button>
     </div>
   </div>
 </div>

@@ -1,7 +1,24 @@
-<form action="">
-  <label for="name-field">Nome</label>
-  <input type="text" name="name-field" id="name-field" placeholder="Informe os dados para o campo Nome">
-  <label for="description-field"></label>
-  <input type="text" name="description-field" id="description-field" placeholder="Informe os dados para o campo Descricao">
-  <input type="button" value="exit" [routerLink]="['brand']">
-  <input type="button" value="add"></form>
+<div id="colorGrad">
+  <div class="tabTwo">
+    <div class="form-label">
+      <h1>Marca do Produto - Inserindo</h1>
+      <label for="name-field">Nome</label>
+      <input type="text" name="name-field" id="name-field" class="form-input" placeholder="Informe os dados para o campo Nome" [(ngModel)]="nameInput">
+      <label for="description-field"></label>
+      <input type="text" name="description-field" id="description-field" class="form-input" placeholder="Informe os dados para o campo Descricao" [(ngModel)]="descInput">
+      <div id="button-container">
+        <button type="button" value="exit" [routerLink]="['../']" id="colorB1">
+          <img src="../assets/images/error.svg" alt="" height="30px"
+                        width="50px">
+        </button>
+        <button type="button" value="add" (click)="postBrand()" [routerLink]="['../']" id="colorB2">
+          <img src="../assets/images/check.svg" alt="" height="30px"
+                        width="50px">
+        </button>
+      </div>
+      <div id="text">
+        <p>*field is mandatory</p>
+      </div>
+    </div>
+  </div>
+</div>

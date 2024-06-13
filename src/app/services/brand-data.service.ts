@@ -4,13 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BrandDataService {
-brands: any[] = [{
-  id: 0,
-  name: 'Hugo Boss',
-  description: 'Bom'
-}];
+brands: any[] = [];
 
 addBrand (newBrand: any) {
+  newBrand.id = this.brands.length + 1;
   this.brands.push(newBrand);
 }
 
