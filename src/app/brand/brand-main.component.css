@@ -63,6 +63,7 @@ input{
 .table{
   width: 97%;
   height: 55%;
+  overflow-y: scroll;
 }
 .rowTop{
   width: 100%;
