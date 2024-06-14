@@ -5,8 +5,11 @@ import { GroupComponent } from './group/group.component';
 import { BrandMainComponent } from './brand/brand-main.component';
 import { AddGroupComponent } from './add-group/add-group.component';
 import { EditGroupComponent } from './edit-group/edit-group.component';
-import { AddBrandComponent } from './add-brand/add-brand.component';
 import { BrandEditComponent } from './brand-edit/brand-edit.component';
+import { UnitComponent } from './unit/unit.component';
+import { AddUnitComponent } from './add-unit/add-unit.component';
+import { AddBrandComponent } from './add-brand/add-brand.component';
+import { EditUnitComponent } from './edit-unit/edit-unit.component';
 
 const routes: Routes = [
   {path: "dashboard", component: DashboardMainComponent},
@@ -14,7 +17,10 @@ const routes: Routes = [
   {path: 'brand', component: BrandMainComponent},
   {path: 'group/addGroup', component: AddGroupComponent},
   {path: 'group/editGroup/:id', component: EditGroupComponent},
-  {path: 'brand/brand-add', component: AddBrandComponent},
+  {path: 'unit', component: UnitComponent},
+  {path: 'unit/addUnit', component: AddUnitComponent},
+  {path: 'unit/editUnit/:id', component: EditUnitComponent},
+  {path: 'brand/addBrand', component: AddBrandComponent},
   {path: 'brand/brand-edit/:id', component: BrandEditComponent}
 ];
 
