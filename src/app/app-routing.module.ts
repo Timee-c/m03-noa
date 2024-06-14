@@ -6,6 +6,7 @@ import { BrandMainComponent } from './brand/brand-main.component';
 import { SubgroupAddComponent } from './subgroup-add/subgroup-add.component';
 import { SubgroupComponent } from './subgroup/subgroup.component';
 import { UnitComponent } from './unit/unit.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardMainComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'subgroup-add', component: SubgroupAddComponent },
    { path: 'subgroup', component: SubgroupComponent },
    { path: 'unit', component: UnitComponent },
+   { path: 'product', component: ProductComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

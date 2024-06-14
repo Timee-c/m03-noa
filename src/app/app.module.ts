@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SubgroupAddComponent } from './subgroup-add/subgroup-add.component';
 import { SubgroupComponent } from './subgroup/subgroup.component';
 import { UnitComponent } from './unit/unit.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UnitComponent } from './unit/unit.component';
     AddBrandComponent,
     SubgroupAddComponent,
     SubgroupComponent,
-    UnitComponent
+    UnitComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

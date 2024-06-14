@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="tittle">
+    <h1>Produto</h1>
+  </div>
+  <div class="bloco">
+    <div class="header">
+      <div class="left">
+        <input type="number">
+        <label for="">results per page</label>
+      </div>
+      <div class="right">
+        <label for="search">Search</label>
+        <input type="text" id="search">
+      </div>
+    </div>
+    <div class="table">
+      <div class="rowTop">
+        <div class="buttonsTable"></div>
+        <div class="id">
+          <h3>id</h3>
+        </div>
+        <div class="name">
+          <h3>Nome</h3>
+        </div>
+        <div class="gtin">
+          <h3>GTIN</h3>
+        </div>
+        <div class="value">
+          <h3>Valor</h3>
+        </div>
+        <div class="date">
+          <h3>Data</h3>
+        </div>
+        <div class="subgroup">
+          <h3>Subgrupo</h3>
+        </div>
+        <div class="brand">
+          <h3>Marca</h3>
+        </div>
+        <div class="unit">
+          <h3>Unidade</h3>
+        </div>
+      </div>
+
+      <!-- Exemplo de loop para exibir produtos -->
+      <ul class="row" *ngFor="let product of products">
+        <li class="buttonsTable">
+          <button class="editBtn"><mat-icon>create</mat-icon></button>
+          <button class="deleteBtn"><mat-icon>delete</mat-icon></button>
+        </li>
+        <li class="id">
+          <p>{{ product.id }}</p>
+        </li>
+        <li class="name">
+          <p>{{ product.name }}</p>
+        </li>
+        <li class="gtin">
+          <p>{{ product.gtin }}</p>
+        </li>
+        <li class="value">
+          <p>{{ product.value }}</p>
+        </li>
+        <li class="date">
+          <p>{{ product.date }}</p>
+        </li>
+        <li class="subgroup">
+          <p>{{ product.subgroup }}</p>
+        </li>
+        <li class="brand">
+          <p>{{ product.brand }}</p>
+        </li>
+        <li class="unit">
+          <p>{{ product.unit }}</p>
+        </li>
+      </ul>
+
+    </div>
+    <div class="pages">
+      <div class="text">
+        <p>Showing 0 to 0 of 0 entries</p>
+      </div>
+      <div class="buttons">
+        <button class="prevBtn">Previous</button>
+        <button class="nextBtn">Next</button>
+      </div>
+    </div>
+    <div class="add">
+      <button id="addProduct">+</button>
+    </div>
+  </div>
+</div>
