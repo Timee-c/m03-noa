@@ -1,0 +1,32 @@
+<!-- Div pai com gradiente de cor -->
+<div id="colorGrad">
+    <div class="tabTwo">
+        
+        <div class="form-label">
+            <h1>Produto SubGrupo - Inserindo</h1>
+            <label for="input-select">Id Produto Grupo</label>
+            <select id="input-select" name="option" class="form-select" [(ngModel)]="selectedOption" required>
+                <option value="" disabled selected>Informe os dados para o campo Id Produto Grupo</option>
+                <option *ngFor="let group of getGroupsServiceData()" [value]="group.id">
+                {{ group.name }}
+              </option>
+            </select>
+            <label for="input-id">Nome</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="name" placeholder="Digite seu nome">
+            <label for="input-id">Descricao</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="description" placeholder="Digite uma descrição">
+            <!-- Movendo os botões e o texto para dentro da div form-label -->
+            <div class="button-container">
+                <button type="submit" id="colorB1" [routerLink]="['/subgroup']"><img src="/assets/images/error.svg" alt="" height="30px"
+                    width="50px"></button>
+            <button type="reset" id="colorB2" [routerLink]="['/subgroup']" (click)="postSubGroup()"><img src="/assets/images/check.svg" alt="" height="30px"
+                    width="50px"></button>
+            </div>
+            <div id="text">
+                <p>*field is mandatory</p>
+            </div>
+            <!-- Fim dos botões e do texto -->
+
+        </div>
+    </div>
+</div>
