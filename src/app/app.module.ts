@@ -21,7 +21,10 @@ import { EditUnitComponent } from './edit-unit/edit-unit.component';
 import { SubGroupComponent } from './sub-group/sub-group.component';
 import { AddSubGroupComponent } from './add-sub-group/add-sub-group.component';
 import {RouterModule} from '@angular/router';
-import { EditSubGroupComponent } from './edit-sub-group/edit-sub-group.component';
+import { EditSubGroupComponent } from './edit-sub-group/edit-sub-group.component';import { ProductComponent } from './product/product.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
+
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, SidebarComponent, GroupComponent,
@@ -35,7 +38,10 @@ import { EditSubGroupComponent } from './edit-sub-group/edit-sub-group.component
     EditUnitComponent,
     SubGroupComponent,
     AddSubGroupComponent,
-    EditSubGroupComponent
+    EditSubGroupComponent,
+    ProductComponent,
+    AddProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
