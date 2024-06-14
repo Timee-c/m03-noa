@@ -1,0 +1,36 @@
+<div id="colorGrad">
+  <div class="tabTwo">
+    <div class="form-label">
+      <h1>Produto - Inserindo</h1>
+      <label for="input-select">Id Produto Marca</label>
+            <select id="input-select" name="option" class="form-select" [(ngModel)]="selectedOptionBrand" required>
+                <option value="" disabled selected>Informe os dados para o campo Id Produto Marca</option>
+                <option *ngFor="let brand of getBrandServiceData()" [value]="brand.id">
+                {{ brand.name }}
+              </option>
+            </select>
+      <label for="name-field">Nome</label>
+      <input type="text" name="name-field" id="name-field" class="form-input" required placeholder="Informe os dados para o campo Nome" [(ngModel)]="nameInput">
+      <label for="gtin-field">Gtin</label>
+      <input type="text" name="gtin-field" id="gtin-field" class="form-input" required placeholder="Informe os dados para o campo Descricao" [(ngModel)]="gtinInput">
+      <label for="value-field">Valor</label>
+      <input type="text" name="value-field" id="value-field" class="form-input" required placeholder="Informe os dados para o campo Descricao" [(ngModel)]="valueInput">
+      <label for="date-field">Data</label>
+      <input type="text" name="date-field" id="description-field" class="form-input" required placeholder="Informe os dados para o campo Descricao" [(ngModel)]="dateInput">
+      <div id="button-container">
+        <button type="button" value="exit" [routerLink]="['../']" id="colorB1">
+          <img src="../assets/images/error.svg" alt="" height="30px"
+                        width="50px">
+        </button>
+        <button type="button" value="add" (click)="postProduct()" [routerLink]="['../']" id="colorB2">
+          <img src="../assets/images/check.svg" alt="" height="30px"
+                        width="50px">
+        </button>
+      </div>
+      <div id="text">
+        <p>*field is mandatory</p>
+      </div>
+    </div>
+  </div>
+</div>
+

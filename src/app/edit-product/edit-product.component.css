@@ -1,0 +1,147 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 640px) and (min-height: 604px){
+  html, body {
+      overflow: auto hidden; /* Adicione overflow:auto para permitir a rolagem em telas maiores */
+  }
+}
+
+#colorGrad {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: inset 0 0 20px rgba(193, 193, 193, 0.5);
+  /* Adiciona sombra cinza */
+  display: flex;
+  justify-content: center; /* Alinha a .tabTwo horizontalmente */
+  align-items: center; /* Alinha a .tabTwo verticalmente */
+}
+
+#colorGrad h1 {
+  font-size: 24px;
+  color: #827b7a;
+  white-space: nowrap; /* Evita quebras de linha */
+  overflow: hidden; /* Evita que o texto ultrapasse o contêiner */
+  text-overflow: ellipsis; /* Adiciona reticências quando o texto ultrapassar */
+  margin-bottom: 2em;
+}
+
+@media screen and (min-height: 607px) {
+  #colorGrad {
+      height: 80vh; /* Altere para 80% da altura da tela */
+      overflow: hidden; /* Remova o overflow:auto para evitar a rolagem */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+.tittle {
+  display: flex;
+  width: 98%;
+  text-align: left;
+}
+
+/* Estilo para a div interna, simulando uma tabela */
+.tabTwo {
+  width: 100%; /* Ajuste a largura conforme necessário */
+  height: 40vw;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0 0 20px rgba(193, 193, 193, 0.5); /* Adiciona sombra cinza */
+  margin: 100px;
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Alinha os itens horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.form-label {
+  width: 95%; /* Ajuste a largura conforme necessário */
+  height: 35vw;
+  background-color: white;
+  margin: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 2px;
+}
+
+@media screen and (min-width: 640px) {
+  .form-label {
+      padding-bottom: 10px;
+      height: 80%;
+      width: 90%;
+  }  
+}
+
+.form-input {
+  padding: 15px; /* Adiciona preenchimento interno para melhorar a aparência */
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 640px) {
+  .form-input {
+      height: 5%;
+      padding: 16px;
+  }
+}
+
+#input-id {
+  margin-bottom: 70px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Adiciona espaçamento entre os campos */
+}
+
+label {
+  display: block; /* Faz com que o título ocupe uma linha inteira */
+  margin-bottom: 10px; /* Adiciona espaçamento entre o título e o input */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px; /* Adicione margem acima dos botões para espaçamento */
+}
+
+.button-container button {
+  margin: 0 12px; /* Adicione margem entre os botões */
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+}
+
+#colorB1 {
+  background: rgb(255, 80, 80);
+}
+
+#colorB2 {
+  background: rgb(91, 225, 91);
+}
+
+#text {
+  left: 0;
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+@media screen and (min-width: 640px) {
+  #text {
+      margin-top: 10px;
+  }
+}
