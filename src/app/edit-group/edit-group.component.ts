@@ -15,7 +15,6 @@ export class EditGroupComponent implements OnInit {
   private groupDataService = inject(GroupDataService);
 
   editGroup() {
-    console.log("a");
     const newGroup = {
       name: this.name,
       description: this.description

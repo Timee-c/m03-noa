@@ -23,7 +23,6 @@ export class GroupDataService {
     }
 
     editGroup(newGroup: any, id: number) {
-        console.log(newGroup)
         this.http.put(`${this.apiUrl}/${(id)}`, newGroup).subscribe(() => {         
         })
     }

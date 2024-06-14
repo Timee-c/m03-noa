@@ -7,14 +7,13 @@ import { BrandDataService } from '../services/brand-data.service';
   styleUrls: ['./brand-main.component.css']
 })
 export class BrandMainComponent {
-
-  private brandsService =  inject(BrandDataService);
+  private brandsService = inject(BrandDataService);
 
   getbrandsServiceData() {
     return this.brandsService;
   }
 
-  addBrand (brandToAdd: any) {
+  addBrand(brandToAdd: any) {
     this.brandsService.addBrand(brandToAdd);
     brandToAdd.id = this.brandsService.brands.length + 1;
   }
