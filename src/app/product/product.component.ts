@@ -19,11 +19,11 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getProductDataServiceData().getProduct();
+    this.productDataService.getProducts();
   }
 
   getProductDataServiceData() {
-    return this.productDataService;
+    return this.productDataService.products;
   }
 
 }

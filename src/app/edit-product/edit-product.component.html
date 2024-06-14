@@ -1,31 +1,50 @@
 <!-- Div pai com gradiente de cor -->
 <div id="colorGrad">
-  <div class="tabTwo">
-      
-      <div class="form-label">
-          <h1>Produto - Editando</h1>
-          <label for="input-id">Id</label>
-          <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="id" readonly>
-          <label for="input-id">Nome</label>
-          <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="name" placeholder="Digite seu nome">
-          <label for="input-id">Gtin</label>
-          <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="gtin" placeholder="Digite o gtin">
-          <label for="input-id">Valor</label>
-          <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="value" placeholder="Digite o valor">
-          <label for="input-id">Data</label>
-          <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="date" placeholder="Digite a data">
-          <!-- Movendo os botões e o texto para dentro da div form-label -->
-          <div class="button-container">
-              <button type="submit" id="colorB1" [routerLink]="['/product'] "><img src="/assets/images/error.svg" alt="" height="30px"
-                      width="50px"></button>
-              <button type="reset" id="colorB2" [routerLink]="['/product']" (click)="editProduct()"><img src="/assets/images/check.svg" alt="" height="30px"
-                      width="50px"></button>
-          </div>
-          <div id="text">
-              <p>*field is mandatory</p>
-          </div>
-          <!-- Fim dos botões e do texto -->
+    <div class="tabTwo">
 
-      </div>
-  </div>
+        <div class="form-label">
+            <h1>Produto - Editando</h1>
+            <label for="input-id">Id</label>
+            <label for="input-select">Id Produto Marca</label>
+            <select id="input-select" name="option" class="form-select" [(ngModel)]="selectedOptionBrand" required>
+                <option value="" disabled selected>Informe os dados para o campo Id Produto Marca</option>
+                <option *ngFor="let brand of getBrandServiceData()" [value]="brand.id">
+                    {{ brand.name }}
+                </option>
+            </select>
+            <label for="input-select2">Id Produto Unidade</label>
+            <select id="input-select2" name="option2" class="form-select" [(ngModel)]="selectedOptionUnit" required>
+                <option value="" disabled selected>Informe os dados para o campo Id Produto Unidade</option>
+                <option *ngFor="let unit of getUnitServiceData()" [value]="unit.id">
+                    {{ unit.abbreviation }}
+                </option>
+            </select>
+
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="id" readonly>
+            <label for="input-id">Nome</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="name"
+                placeholder="Digite seu nome">
+            <label for="input-id">Gtin</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="gtin"
+                placeholder="Digite o gtin">
+            <label for="input-id">Valor</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="value"
+                placeholder="Digite o valor">
+            <label for="input-id">Data</label>
+            <input type="text" id="input-id" name="input-id" class="form-input" [(ngModel)]="date"
+                placeholder="Digite a data">
+            <!-- Movendo os botões e o texto para dentro da div form-label -->
+            <div class="button-container">
+                <button type="submit" id="colorB1" [routerLink]="['/product'] "><img src="/assets/images/error.svg"
+                        alt="" height="30px" width="50px"></button>
+                <button type="reset" id="colorB2" [routerLink]="['/product']" (click)="editProduct()"><img
+                        src="/assets/images/check.svg" alt="" height="30px" width="50px"></button>
+            </div>
+            <div id="text">
+                <p>*field is mandatory</p>
+            </div>
+            <!-- Fim dos botões e do texto -->
+
+        </div>
+    </div>
 </div>

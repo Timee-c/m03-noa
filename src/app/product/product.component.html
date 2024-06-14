@@ -43,7 +43,7 @@
       </div>
 
       <!-- Exemplo de loop para exibir produtos -->
-      <ul class="row" *ngFor="let product of products">
+      <ul class="row" *ngFor="let product of getProductDataServiceData()">
         <li class="buttonsTable">
           <button class="editBtn"  [routerLink]="['product-edit',product.id]"><mat-icon>create</mat-icon></button>
           <button class="deleteBtn" (click)="deleteProduct(product.id)"><mat-icon>delete</mat-icon></button>
@@ -61,16 +61,16 @@
           <p>{{ product.value }}</p>
         </li>
         <li class="date">
-          <p>{{ product.date }}</p>
+          <p>{{ product.registration_date }}</p>
         </li>
         <li class="subgroup">
-          <p>{{ product.subgroup }}</p>
+          <p>{{ product.id_product_subgroup.subGroup.name }}</p>
         </li>
         <li class="brand">
-          <p>{{ product.brand }}</p>
+          <p>{{ product.id_product_brand.name }}</p>
         </li>
         <li class="unit">
-          <p>{{ product.unit }}</p>
+          <p>{{ product.id_product_unit.abbreviation }}</p>
         </li>
       </ul>
 

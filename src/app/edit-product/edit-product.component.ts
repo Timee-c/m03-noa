@@ -1,6 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductDataService } from '../services/product-data.service';
+import { BrandDataService } from '../services/brand-data.service';
+import { UnitDataService } from '../services/unit-data.service';
+import { SubGroupDataService } from '../services/subGroup-data.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -14,7 +17,14 @@ name: string = '';
 gtin: string = '';
 value: number = 0;
 date: string = '';
+selectedOptionBrand: number | undefined;
+selectedOptionUnit: number | undefined;
+
 private productDataService = inject(ProductDataService);
+private brandDataService = inject(BrandDataService);
+private unitDataService = inject(UnitDataService);
+private subGroupDataService = inject(SubGroupDataService);
+
 
 editProduct() {
   const newProduct = {
@@ -37,6 +47,22 @@ ngOnInit(): void {
     this.productId = Number(params.get('id'));
     this.loadProductDetails(this.productId)
   })
+  this.getUnitServiceData();
+  this.getBrandServiceData();
+  this.getSubGRoupServiceData();
+}
+
+getUnitServiceData() {
+  return this.unitDataService.unities;
+
+}
+
+getBrandServiceData() {
+  return this.brandDataService.brands;
+}
+
+getSubGRoupServiceData() {
+  return this.subGroupDataService.subGroups;
 }
 
 }

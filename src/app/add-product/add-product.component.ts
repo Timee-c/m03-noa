@@ -47,10 +47,10 @@ export class AddProductComponent implements OnInit{
       name: this.nameInput,
       gtin: this.gtinInput,
       value: this.valueInput,
-      date: this.dateInput,
-      id_product_unit: this.getUnitServiceData(),
-      id_product_brand: this.getBrandServiceData(),
-      id_product_subgroup: this.getSubGroupServiceData()
+      registration_date: this.dateInput,
+      id_product_unit: this.selectedOptionUnit,
+      id_product_brand: this.selectedOptionBrand,
+      id_product_subgroup: this.selectedOptionSubGroup
     };
     this.productDataService.addProduct(newProduct);
   }

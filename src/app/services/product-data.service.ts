@@ -5,10 +5,21 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductDataService {
-  products: any[] = [];
+  private apiUrl = 'http://localhost:3000/products';
+    products: any[] = [];
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
+    addProduct(newGroup: any): void {
+        this.http.post<any>(this.apiUrl, newGroup).subscribe(() => {});
+    }
+    getProducts(): void {
+      
+    console.log(this.products)
+      this.http.get<any[]>(this.apiUrl).subscribe(products => {
+          this.products = products;
+      });
+  }
   getProduct() {
     this.http.get<any[]>('http://localhost:3000/products').subscribe(products => this.products = products);
   }
@@ -17,9 +28,6 @@ export class ProductDataService {
     this.http.get<any>(`http://localhost:3000/products/${productId}`).subscribe();
   }
 
-  addProduct(newProduct: any) {
-    this.http.post<any>('http://localhost:3000/products', newProduct).subscribe();
-  }
 
   editProduct(newProduct: any, productId: number) {
     this.http.put(`http://localhost:3000/products/${productId}`, newProduct).subscribe();
