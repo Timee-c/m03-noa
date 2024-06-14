@@ -5,12 +5,12 @@
   <div class="bloco">
     <div class="header">
       <div class="left">
-        <input type="number" id="resultsPerPage">
-        <label for="resultsPerPage">results per page</label>
+        <input type="number">
+        <label for="">results per page</label>
       </div>
       <div class="right">
-        <label for="search">Search</label>
-        <input type="text" id="search">
+        <label for="searc">Search</label>
+        <input type="text">
       </div>
     </div>
     <div class="table">
@@ -26,21 +26,23 @@
           <h3>Descrição</h3>
         </div>
       </div>
-      <ul *ngFor="let group of groups" class="row">
+
+      <ul class="row" *ngFor="let group of getGroupsServiceData()">
         <li class="buttonsTable">
-          <button class="editBtn"><mat-icon>create</mat-icon></button>
-          <button class="deleteBtn"><mat-icon>delete</mat-icon></button>
+          <button class="editBtn" [routerLink]="['editGroup',group.id]">edit</button>
+          <button class="deleteBtn" (click)="deleteGroup(group.id)">delete</button>
         </li>
         <li class="id">
-          <p>{{ group.id }}</p>
+          <p>{{group.id}}</p>
         </li>
         <li class="name">
-          <p>{{ group.name }}</p>
+          <p>{{group.name}}</p>
         </li>
         <li class="description">
-          <p>{{ group.description }}</p>
+          <p>{{group.description}}</p>
         </li>
       </ul>
+
     </div>
     <div class="pages">
       <div class="text">
@@ -52,7 +54,7 @@
       </div>
     </div>
     <div class="add">
-      <button id="addBrand">+</button>
+      <button id="addBrand" [routerLink]="['addGroup']">+</button>
     </div>
   </div>
 </div>

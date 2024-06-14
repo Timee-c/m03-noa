@@ -19,7 +19,6 @@
 
   .sidebar-open {
     grid-template-columns: 0fr !important;
-    color: red;
   }
 
   .sidebar-closed{
