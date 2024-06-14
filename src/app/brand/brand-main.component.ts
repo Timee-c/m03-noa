@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BrandDataService } from '../services/brand-data.service';
 
 @Component({
@@ -6,9 +6,14 @@ import { BrandDataService } from '../services/brand-data.service';
   templateUrl: './brand-main.component.html',
   styleUrls: ['./brand-main.component.css']
 })
-export class BrandMainComponent {
-
+export class BrandMainComponent implements OnInit {
   private brandDataService =  inject(BrandDataService);
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.getBrandDataServiceData().getBrand();
+  }
 
   getBrandDataServiceData() {
     return this.brandDataService;

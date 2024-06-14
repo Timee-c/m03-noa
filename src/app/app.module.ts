@@ -9,19 +9,22 @@ import { GroupComponent } from './group/group.component';
 import { BrandMainComponent } from './brand/brand-main.component';
 import { AddBrandComponent } from './add-brand/add-brand.component';
 import { FormsModule } from "@angular/forms";
+import { provideHttpClient } from '@angular/common/http';
+import { BrandEditComponent } from './brand-edit/brand-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, SidebarComponent, GroupComponent,
     BrandMainComponent,
-    AddBrandComponent
+    AddBrandComponent,
+    BrandEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

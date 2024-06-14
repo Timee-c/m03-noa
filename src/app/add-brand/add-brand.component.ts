@@ -19,7 +19,5 @@ postBrand() {
     description: this.descInput
   };
   this.brandDataService.addBrand(newBrand);
-  console.log(newBrand.name);
 }
-
 }
