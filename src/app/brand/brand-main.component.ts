@@ -8,8 +8,15 @@ import { BrandDataService } from '../services/brand-data.service';
 })
 export class BrandMainComponent implements OnInit {
   private brandDataService =  inject(BrandDataService);
-
+  id: number = 0;
+  brands: any[] = [];
   constructor() {}
+
+  deleteBrand(brandId: number) {
+    this.brandDataService.removeBrand(brandId);
+    this.ngOnInit();
+    window.location.reload();
+  }
 
   ngOnInit(): void {
     this.getBrandDataServiceData().getBrand();

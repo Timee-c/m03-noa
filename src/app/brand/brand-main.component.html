@@ -29,8 +29,8 @@
 
       <ul class="row" *ngFor="let brand of getBrandDataServiceData().brands">
         <li class="buttonsTable">
-          <button class="editBtn" [routerLink]="['brand-edit']">edit</button>
-          <button class="deleteBtn" (click)="getBrandDataServiceData().removeBrand(brand.id - 1)">delete</button>
+          <button class="editBtn" [routerLink]="['brand-edit',brand.id]"><mat-icon>create</mat-icon></button>
+          <button class="deleteBtn" (click)="deleteBrand(brand.id)"><mat-icon>delete</mat-icon></button>
         </li>
         <li class="id">
           <p>{{brand.id}}</p>
