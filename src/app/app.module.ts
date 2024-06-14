@@ -15,6 +15,9 @@ import { AddGroupComponent } from './add-group/add-group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { BrandEditComponent } from './brand-edit/brand-edit.component';
+import { UnitComponent } from './unit/unit.component';
+import { AddUnitComponent } from './add-unit/add-unit.component';
+import { EditUnitComponent } from './edit-unit/edit-unit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { BrandEditComponent } from './brand-edit/brand-edit.component';
     AddBrandComponent,
     AddGroupComponent,
     EditGroupComponent,
-    BrandEditComponent
+    BrandEditComponent,
+    UnitComponent,
+    AddUnitComponent,
+    EditUnitComponent
   ],
   imports: [
     BrowserModule,
