@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: "dashboard", component: DashboardMainComponent},
   {path: 'group', component: GroupComponent},
   {path: 'brand', component: BrandMainComponent},
-  {path: 'brand/brandAdd', component: AddBrandComponent},
+  {path: 'brand/brand-add', component: AddBrandComponent},
   {path: 'brand/brand-edit', component: BrandEditComponent},
   {path: 'brand/brand-edit/:id', component: BrandEditComponent}
 ];
