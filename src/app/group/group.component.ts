@@ -11,7 +11,6 @@ export class GroupComponent  implements OnInit{
   groups: any[] = [];
   ngOnInit(): void {
     this.groupDataService.getGroups();
-
   }
 
   deleteGroup(groupId: number) {

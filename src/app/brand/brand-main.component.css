@@ -71,6 +71,7 @@ input {
 .table {
   width: 97%;
   height: 55%;
+  overflow-y: scroll;
 }
 
 .rowTop {
@@ -121,6 +122,8 @@ input {
 
 .text {
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .buttons {

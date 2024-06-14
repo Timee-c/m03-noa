@@ -1,22 +1,32 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class BrandDataService {
-brands: any[] = [{
-  id: 0,
-  name: 'Hugo Boss',
-  description: 'Bom'
-}];
+  brands: any[] = [];
+  
+  constructor(private http: HttpClient) { }
 
-addBrand (newBrand: any) {
-  this.brands.push(newBrand);
-}
+  getBrand() {
+    this.http.get<any[]>('http://localhost:3000/brands').subscribe(brands => this.brands = brands);
+  }
 
-removeBrand (brandId: number) {
-  this.brands.splice(brandId, 1);
-}
+  getBrandById(brandId: any) {
+    this.http.get<any>(`http://localhost:3000/brands/${brandId}`).subscribe();
+  }
 
-  constructor() { }
+  addBrand(newBrand: any) {
+    this.http.post<any>('http://localhost:3000/brands', newBrand).subscribe();
+  }
+
+  editBrand(newBrand: any, brandId: number) {
+    this.http.put(`http://localhost:3000/brands/${brandId}`, newBrand).subscribe();
+  }
+
+  removeBrand(brandId: number) {
+    this.http.delete<any>(`http://localhost:3000/brands/${brandId}`).subscribe();
+    this.brands.splice(brandId, 1);
+  }
 }

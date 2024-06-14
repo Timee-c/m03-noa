@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BrandDataService } from '../services/brand-data.service';
 
 @Component({
@@ -6,15 +6,23 @@ import { BrandDataService } from '../services/brand-data.service';
   templateUrl: './brand-main.component.html',
   styleUrls: ['./brand-main.component.css']
 })
-export class BrandMainComponent {
-  private brandsService = inject(BrandDataService);
+export class BrandMainComponent implements OnInit {
+  private brandDataService =  inject(BrandDataService);
+  id: number = 0;
+  brands: any[] = [];
+  constructor() {}
 
-  getbrandsServiceData() {
-    return this.brandsService;
+  deleteBrand(brandId: number) {
+    this.brandDataService.removeBrand(brandId);
+    this.ngOnInit();
+    window.location.reload();
   }
 
-  addBrand(brandToAdd: any) {
-    this.brandsService.addBrand(brandToAdd);
-    brandToAdd.id = this.brandsService.brands.length + 1;
+  ngOnInit(): void {
+    this.getBrandDataServiceData().getBrand();
+  }
+
+  getBrandDataServiceData() {
+    return this.brandDataService;
   }
 }
