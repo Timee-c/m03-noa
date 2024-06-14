@@ -10,6 +10,9 @@ import { UnitComponent } from './unit/unit.component';
 import { AddUnitComponent } from './add-unit/add-unit.component';
 import { AddBrandComponent } from './add-brand/add-brand.component';
 import { EditUnitComponent } from './edit-unit/edit-unit.component';
+import { ProductComponent } from './product/product.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 const routes: Routes = [
   {path: "dashboard", component: DashboardMainComponent},
@@ -20,8 +23,11 @@ const routes: Routes = [
   {path: 'unit', component: UnitComponent},
   {path: 'unit/addUnit', component: AddUnitComponent},
   {path: 'unit/editUnit/:id', component: EditUnitComponent},
-  {path: 'brand/addBrand', component: AddBrandComponent},
-  {path: 'brand/brand-edit/:id', component: BrandEditComponent}
+  {path: 'brand/add-brand', component: AddBrandComponent},
+  {path: 'brand/brand-edit/:id', component: BrandEditComponent},
+  {path: 'product', component: ProductComponent},
+  {path: 'product/add-product', component: AddProductComponent},
+  {path:'product/edit-produtc/:id', component: EditProductComponent}
 ];
 
 @NgModule({
