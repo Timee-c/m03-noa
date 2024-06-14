@@ -9,6 +9,13 @@
                 {{ brand.name }}
               </option>
             </select>
+      <label for="input-select2">Id Produto Unidade</label>
+      <select id="input-select2" name="option2" class="form-select" [(ngModel)]="selectedOptionUnit" required>
+          <option value="" disabled selected>Informe os dados para o campo Id Produto Unidade</option>
+          <option *ngFor="let unit of getUnitServiceData()" [value]="unit.id">
+          {{ unit.abbreviation }}
+        </option>
+      </select>
       <label for="name-field">Nome</label>
       <input type="text" name="name-field" id="name-field" class="form-input" required placeholder="Informe os dados para o campo Nome" [(ngModel)]="nameInput">
       <label for="gtin-field">Gtin</label>
