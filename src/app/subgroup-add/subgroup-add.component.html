@@ -1,0 +1,33 @@
+<!-- Div pai com gradiente de cor -->
+<div id="colorGrad">
+  <div class="tabTwo">
+    <div class="form-label">
+      <label for="input-id">Id Produto Grupo</label>
+      <select id="input-id" class="form-input">
+        <option class="colorOpt" value="Informe os dados para o campo Id produto Grupo">Informe os dados para o campo Id produto Grupo</option>
+        <option class="colorOpt" value="Celulares">Celulares</option>
+        <option class="colorOpt" value="Computadores">Computadores</option>
+      </select>
+
+      <label for="input-name">Nome</label>
+      <input type="text" id="input-name" name="input-name" class="form-input" placeholder="Digite seu nome" [(ngModel)]="subgroup.name">
+
+      <label for="input-description">Descricao</label>
+      <input type="text" id="input-description" name="input-description" class="form-input" placeholder="Digite uma descrição" [(ngModel)]="subgroup.description">
+
+      <!-- Movendo os botões e o texto para dentro da div form-label -->
+      <div class="button-container">
+        <button type="submit" id="colorB1" (click)="onSubmit()">
+          <mat-icon>clear</mat-icon>
+        </button>
+        <button type="reset" id="colorB2" (click)="cancel()">
+          <mat-icon>done</mat-icon>
+        </button>
+      </div>
+      <div id="text">
+        <p>*Campo obrigatório</p>
+      </div>
+      <!-- Fim dos botões e do texto -->
+    </div>
+  </div>
+</div>

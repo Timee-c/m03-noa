@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-group',
@@ -11,4 +12,10 @@ export class GroupComponent {
     { id: 2, name: 'Group 2', description: 'Description 2' },
     // Add more group objects as needed
   ];
+
+  constructor(private router: Router) {}
+
+  navigateToAddSubgroup() {
+    this.router.navigate(['/subgroup-add']);
+  }
 }
