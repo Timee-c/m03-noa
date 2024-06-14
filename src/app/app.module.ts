@@ -18,7 +18,10 @@ import { BrandEditComponent } from './brand-edit/brand-edit.component';
 import { UnitComponent } from './unit/unit.component';
 import { AddUnitComponent } from './add-unit/add-unit.component';
 import { EditUnitComponent } from './edit-unit/edit-unit.component';
-import { ProductComponent } from './product/product.component';
+import { SubGroupComponent } from './sub-group/sub-group.component';
+import { AddSubGroupComponent } from './add-sub-group/add-sub-group.component';
+import {RouterModule} from '@angular/router';
+import { EditSubGroupComponent } from './edit-sub-group/edit-sub-group.component';import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 
@@ -33,6 +36,9 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     UnitComponent,
     AddUnitComponent,
     EditUnitComponent,
+    SubGroupComponent,
+    AddSubGroupComponent,
+    EditSubGroupComponent,
     ProductComponent,
     AddProductComponent,
     EditProductComponent
@@ -42,7 +48,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     MatIconModule,
     AppRoutingModule,
     HttpClientModule, BrowserAnimationsModule,
-    FormsModule
+    FormsModule, RouterModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
