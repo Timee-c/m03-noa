@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ProductDataService } from '../services/product-data.service';
 import { BrandDataService } from '../services/brand-data.service';
 import { UnitDataService } from '../services/unit-data.service';
+import { SubGroupDataService } from '../services/subGroup-data.service';
 
 @Component({
   selector: 'app-add-product',
@@ -12,7 +13,8 @@ export class AddProductComponent implements OnInit{
 
   private brandDataService = inject(BrandDataService);
   private productDataService = inject(ProductDataService);
-  private unitDataService = inject(UnitDataService)
+  private unitDataService = inject(UnitDataService);
+  private subGroupDataService = inject(SubGroupDataService);
 
   nameInput: string = '';
   gtinInput: string = '';
@@ -20,16 +22,20 @@ export class AddProductComponent implements OnInit{
   dateInput: string = '';
   selectedOptionBrand: number | undefined;
   selectedOptionUnit: number | undefined;
+  selectedOptionSubGroup: number | undefined;
 
   ngOnInit(): void {
     this.getBrandServiceData();
     this.getUnitServiceData();
+    this.getSubGroupServiceData();
   }
 
   getUnitServiceData() {
-    console.log(this.unitDataService.unities);
     return this.unitDataService.unities;
+  }
 
+  getSubGroupServiceData() {
+    return this.subGroupDataService.subGroups;
   }
 
   getBrandServiceData() {
@@ -43,7 +49,8 @@ export class AddProductComponent implements OnInit{
       value: this.valueInput,
       date: this.dateInput,
       id_product_unit: this.getUnitServiceData(),
-      id_product_brand: this.getBrandServiceData()
+      id_product_brand: this.getBrandServiceData(),
+      id_product_subgroup: this.getSubGroupServiceData()
     };
     this.productDataService.addProduct(newProduct);
   }

@@ -16,6 +16,13 @@
           {{ unit.abbreviation }}
         </option>
       </select>
+      <label for="input-select3">Id Produto Sub-Grupo</label>
+      <select id="input-select3" name="option3" class="form-select" [(ngModel)]="selectedOptionSubGroup" required>
+          <option value="" disabled selected>Informe os dados para o campo Id Sub-Produto Unidade</option>
+          <option *ngFor="let subGroup of getSubGroupServiceData()" [value]="subGroup.id">
+          {{ subGroup.name }}
+        </option>
+      </select>
       <label for="name-field">Nome</label>
       <input type="text" name="name-field" id="name-field" class="form-input" required placeholder="Informe os dados para o campo Nome" [(ngModel)]="nameInput">
       <label for="gtin-field">Gtin</label>

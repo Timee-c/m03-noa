@@ -28,7 +28,7 @@
         </div>
         <ul *ngFor="let unit of getUnitiesServiceData()" class="row">
           <li class="buttonsTable">
-            <button class="editBtn"><mat-icon [routerLink]="['editUnit',unit.id]">create</mat-icon></button>
+            <button class="editBtn"><mat-icon [routerLink]="['edit-unit',unit.id]">create</mat-icon></button>
             <button class="deleteBtn" (click)="deleteUnit(unit.id)"><mat-icon>delete</mat-icon></button>
           </li>
           <li class="id">
